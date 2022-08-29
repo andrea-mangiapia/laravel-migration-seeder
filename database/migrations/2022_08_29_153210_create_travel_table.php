@@ -15,6 +15,19 @@ class CreateTravelTable extends Migration
     {
         Schema::create('travel', function (Blueprint $table) {
             $table->id();
+
+            $table->string('destination', 50);
+
+            $table->date('date');
+
+            $table->smallInteger('duration');
+
+            $table->text('description');
+
+            $table->tinyInteger('availability')->unsigned()->default(1);
+
+            $table->decimal('price', 8, 2);
+
             $table->timestamps();
         });
     }
