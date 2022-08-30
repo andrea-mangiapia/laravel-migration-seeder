@@ -8,12 +8,12 @@ use App\Travel;
 class HomeController extends Controller
 {
     public function index() {
-        $travel_agency = Travel::all();
+        $travels = Travel::all();
 
         $data = [
-            'travels_agency' => $travel_agency
+            'travels' => $travels
         ];
 
-        return view('home');
+        return view('home', $data);
     }   
 }
