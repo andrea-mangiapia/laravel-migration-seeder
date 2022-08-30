@@ -24,10 +24,10 @@ class CreateTravelsTable extends Migration
 
             $table->text('description')->nullable();
 
-            $table->tinyInteger('availability')->unsigned()->default(1);
+            $table->string('availability', 50);
 
             $table->decimal('price', 8, 2);
-            
+
             $table->timestamps();
         });
     }
